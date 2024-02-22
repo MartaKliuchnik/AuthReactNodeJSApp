@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import Nav from './Nav';
-import AuthPage from './AuthPage';
-import ProductsPage from './ProductsPage';
+import Nav from './components/Nav';
+import AuthPage from './components/AuthPage';
+import ProductsPage from './components/ProductsPage';
 
 function App() {
 	return (

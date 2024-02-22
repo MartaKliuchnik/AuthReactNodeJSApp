@@ -1,10 +1,12 @@
 import React from 'react';
+import { login_request } from '../requests/login_request.js';
+import { register_request } from '../requests/register_request.js';
 
 export default function AuthPage() {
 	const loginSubmit = (e) => {
 		e.preventDefault();
 		const { email, password } = e.target;
-		console.log({
+		login_request({
 			email: email.value,
 			password: password.value,
 		});
@@ -15,7 +17,7 @@ export default function AuthPage() {
 	const registerSubmit = (e) => {
 		e.preventDefault();
 		const { email, password } = e.target;
-		console.log({
+		register_request({
 			email: email.value,
 			password: password.value,
 		});
