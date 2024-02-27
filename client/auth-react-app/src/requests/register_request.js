@@ -5,7 +5,7 @@ export const register_request = (user) => {
 			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify(user),
-	}).then((res) => console.log(res));
-	// .then((res) => res.json())
-	// .then((json) => console.log(json));
+	})
+		.then((res) => res.json())
+		.then((json) => console.log(json));
 };

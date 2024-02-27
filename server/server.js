@@ -11,14 +11,17 @@ const PORT = 4334;
 
 app.use(
 	cors({
-		origin: '*',
+		// origin: '*',
+
+		origin: 'http://localhost:5173', // add domen
+		credentials: true, // loading support cookies
 	})
 );
 app.use(express.json());
 app.use(
 	session({
 		secret: 'dfgbvceDF',
-		resave: false,
+		resave: true,
 		saveUninitialized: false,
 	})
 );
